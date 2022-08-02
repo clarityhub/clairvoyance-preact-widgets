@@ -1,0 +1,54 @@
+@import 'main';
+
+.container {
+  background-color: $clair-light;
+  border: 0;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+.header {
+  background-color: $clair-primary;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  h2 {
+    color: $clair-light;
+    font-family: Futura, Helvetica;
+    font-size: rem(20px);
+    font-weight: 300;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  button {
+    background-color: transparent;
+    border: 0;
+    color: #FFF;
+    cursor: pointer;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 0;
+  }
+}
+
+.messages {
+  background: $clair-dust; 
+  flex: 1;
+  margin-top: 50px;
+  overflow: auto;
+}
+
+.form {
+  background-color: #FFF;
+}

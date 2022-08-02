@@ -1,0 +1,11 @@
+.messages {
+  overflow: auto;
+  padding-left: 60px;
+  padding-right: 20px; // 60 - avatarWidth
+}
+
+.avatarOther {
+  bottom: 20px;
+  left: -50px;
+  position: absolute;
+}

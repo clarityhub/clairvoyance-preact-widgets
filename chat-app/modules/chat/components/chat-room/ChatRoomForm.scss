@@ -1,0 +1,27 @@
+@import 'main';
+
+.form {
+  display: flex;
+}
+
+.formContainer {
+  @include clearfix;
+
+  border-top: 1px solid #DEDEDE;
+  padding: 10px;
+}
+
+.formTextArea {
+  flex: 1;
+  max-height: 250px;
+      min-height: 30px;
+  padding: 10px;
+}
+
+.formSend {
+  @extend %button, %button--primary--outline;
+
+  border-radius: 0;
+  min-width: 50px;
+  width: 50px;
+}

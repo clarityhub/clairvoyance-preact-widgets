@@ -1,0 +1,46 @@
+@import 'main';
+
+:global {
+  .socketStatusSlide-enter {
+    opacity: 0;
+    transform: translate(0, -100%);
+  }
+  .socketStatusSlide-enter.socketStatusSlide-enter-active {
+    opacity: 1;
+    transform: translate(0, 0%);
+    transition: all $fast ease-in-out;
+  }
+  .socketStatusSlide-leave {
+    opacity: 1;
+    transform: translate(0, 0%);
+  }
+  .socketStatusSlide-leave.socketStatusSlide-leave-active {
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition: all $fast ease-in-out;
+  }
+}
+
+.popUp {
+  @extend %clair-text;
+
+  border-top: 1px solid white;
+  left: 0;
+  padding: 15px;
+  position: fixed;
+  right: 0px;
+  text-align: center;
+  top: 50px;
+  width: 100%;
+  z-index: 999999;
+}
+
+.popUpAlert {
+  background-color: $clair-danger;
+  color: $clair-light;
+}
+
+.popUpWarning {
+  background-color: $clair-primary;
+  color: $clair-light;
+}

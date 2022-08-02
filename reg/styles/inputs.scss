@@ -1,0 +1,124 @@
+@import 'main';
+
+$registration__breakpoint--mobile: 898px;
+
+:global {
+  .user-info__input-group {
+    padding: 15px 0 60px;
+    text-align: left;
+  }
+
+  .invite-users__input-group {
+    padding: 0;
+    text-align: left;
+  }
+
+  .registration-flow .form-group.half-width {
+    display: block;
+    
+    @media (max-width: $registration__breakpoint--mobile) {
+      display: block;
+      margin-top: 14px;
+    }
+  }
+  
+  .registration-flow .form-group.half-width + .half-width {
+    margin-left: 0;
+    margin-top: 32px;
+    
+    @media (max-width: $registration__breakpoint--mobile) {
+      margin-left: 0;
+    }
+  }
+
+  .registration-flow .form-group.half-width input {
+    width: 331px;
+
+    @media (max-width: $registration__breakpoint--mobile) {
+      width: 100%;
+    }
+  }
+
+  .registration-flow .form-group.full-width input {
+    width: 100%;
+  }
+
+  .current-users-list,
+  .invite-users__input-group {
+    position: relative;
+  }
+
+  /* Confirm Plan*/
+  .registration-flow .confirm-plan .half-width + .half-width {
+    margin-left: 33px;
+    margin-top: 20px;
+
+    @media (max-width: $registration__breakpoint--mobile) {
+      margin-left: 0;
+    }
+  }
+
+  .registration-flow__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: $registration__breakpoint--mobile) {
+      bottom: initial;
+      left: initial;
+      padding: 0;
+      position: initial;
+      right: initial;
+
+      button {
+        @include buttonBlock;
+
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .registration-flow__buttons:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  .registration-flow__button--right {
+    float: right;
+
+    @media (max-width: $registration__breakpoint--mobile) {
+      @include buttonLarge;
+    }
+  }
+
+  .registration-flow__button--left {
+    float: left;
+
+    @media (max-width: $registration__breakpoint--mobile) {
+      display: none;
+    }
+  }
+
+  .registration-flow__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 60px;
+  }
+
+  .registration-flow__error {
+    flex: 1;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}

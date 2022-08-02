@@ -1,0 +1,16 @@
+{
+  "extends": ["claire/preact"],
+
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off"
+  },
+
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["chat", "reg"]
+      }
+    }
+  }
+}

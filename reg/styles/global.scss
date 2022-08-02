@@ -1,0 +1,55 @@
+$registration__breakpoint--mobile: 898px;
+:global {
+  .registration-flow {
+    max-width: 332px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .error {
+    color: #DD2476;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    font-size: 13px;
+  }
+
+  .error ~ input {
+    border-bottom-color: #DD2476;
+  }
+
+  .registration-flow__toggle-password {
+    min-width: unset;
+    position: absolute;
+    right: -31px;
+    font-size: 18px;
+  }
+
+  .registration-flow__small-text {
+    padding-top: 10px;
+    
+    > p {
+      font-size: 14px;
+      line-height: 16px;
+      padding-top: 10px;
+    }
+  }
+
+  @media (max-width: $registration__breakpoint--mobile) {
+    .registration-flow .select-plan .registration-flow__buttons{
+      p {
+        padding-top: 17px;
+      }
+    }
+    
+    .stripe-info .user-info__input-group,
+    .stripe-element {
+      width: 100%;
+    }
+
+    .select-plan,
+    .stripe-info {
+      margin-bottom: 60px;
+    }
+  }
+}
